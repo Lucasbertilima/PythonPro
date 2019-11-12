@@ -18,7 +18,7 @@ elif n3>=n1 and n3>=n2 and n3>=n4:
 elif n4>=n1 and n4>=n2 and n4>=n3:
     print(f'A maior nota é {n4}')
 else:
-    print('As notas são iguais')
+    print('')
 
 if n1<=n2 and n1<=n3 and n1<=n4:
     print(f'A menor nota é {n1}')
