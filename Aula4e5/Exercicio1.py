@@ -1,3 +1,4 @@
+#1 -
 #Crie um programa que leia 4 notas
 #imprima a maior nota
 #imprima a menor   
