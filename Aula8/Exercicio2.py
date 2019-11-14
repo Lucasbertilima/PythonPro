@@ -6,7 +6,7 @@
 
 jogador = []
 
-for i in range(0,11):
+for i in range(0,2):
     jogadores={'Nome':'','Posicao':'','Numero':'','PernaBoa':''}
     jogadores['Nome']=input('Digite o nome do jogador')
     jogadores['Posicao']=input('Digite a posição')
@@ -14,5 +14,4 @@ for i in range(0,11):
     jogadores['PernaBoa']=input('Qual a perna boa do jogador')
     jogador.append(jogadores)
 for nao in jogador:
-    print(f"Nome: {jogadores['Nome']} - Posição: {jogadores['Posicao']} - Número: {jogadores['Numero']} - Perna Boa: {jogadores['PernaBoa']}")
-print(jogador)
+    print(f"Nome: {nao['Nome']} - Posição: {nao['Posicao']} - Número: {nao['Numero']} - Perna Boa: {nao['PernaBoa']}")
