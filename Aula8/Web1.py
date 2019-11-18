@@ -7,4 +7,4 @@ app = Flask(__name__)
 def inicio():
     return 'Bem vindo ao mundo real meus queridos'
 
-app.run()
+app.run(host='192.168.0.120')
