@@ -11,3 +11,25 @@ print(f'\n idade:{idade} \n salario:{salario} \n nome:{nome} \n verdadeiro:{verd
 print ('='*20,'\n')
 print ('\t **********')
 print ('\n','='*20)
+
+# name = 'lucas' '' 'Henrique'
+# print((name).count('a'))
+# print((name).lower())
+# print((name).upper())
+# print((name).split('e'))
+# print((name).strip())
+# print((name).capitalize())
+
+# pessoa1 = ["Carinhoso", "Atencioso","Querido"]
+# print(pessoa1)
+# print('nem' .join(pessoa1))
+# print(pessoa1.join('nem'))
+# print(('nem').join(pessoa))
+# frase = 'frase do python'
+
+# print(pessoa1[1:1])
+# print(pessoa1[1:2])
+# print(frase[5:])
+# print(frase[5:10])
+# print(frase[:15])
+# print(pessoa1.count("carinhoso".strip().capitalize()))
