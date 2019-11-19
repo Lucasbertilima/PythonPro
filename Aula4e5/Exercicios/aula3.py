@@ -68,54 +68,45 @@
 # CPF = input('Informe o CPF')
 # NR = input('Informe o número de registo')
 # cargo = input('Informe o cargo')
-# salario = float(input('Qual o salario bruto'))
 
-# if salario <1751.81:
-#     if salario < 1903.98:
-#         INSS = (8*salario)/100
-#         IRRF = salario*0
-#         print(f'INSS = {INSS}')
-#         print(f'IRRF = {IRRF}')
-#         print(f'Salario liquido = {salario-INSS-IRRF}')
-# if salario >= 1751.81 and  salario < 2919.72:
-#     if salario < 1903.98:
-#         INSS = (9.5*salario)/100
-#         IRRF = salario*0
-#         print(f'INSS = {INSS}')
-#         print(f'IRRF = {IRRF}')
-#         print(f'Salario liquido = {salario-INSS-IRRF}')
-#     elif salario >= 1903.98 and salario <2826.65:
-#         INSS = (9.5*salario)/100
-#         IRRF = (7.5*salario)/100
-#         print(f'INSS = {INSS}')
-#         print(f'IRRF = {IRRF}')
-#         print(f'Salario liquido = {salario-INSS-IRRF}')
-#     elif salario >=2826.65 and salario <3751.05:
-#         INSS = (9.5*salario)/100
-#         IRRF = (15*salario)/100
-#         print(f'INSS = {INSS}')
-#         print(f'IRRF = {IRRF}')
-#         print(f'Salario liquido = {salario-INSS-IRRF}')
+def calculo_inss(salario):
+    if salario <1751.81:
+        inss = salario*0.08
+        print(f'salario - inss {salario-inss}')
+    if salario >= 1751.81 and  salario < 2919.72:
+        inss = salario*0.95
+        print(f'salario - inss {salario-inss}')
+    if salario  >=2919.72 and salario< 5839.45:
+        inss = salario*0.11
+        print(f'salario - inss {salario-inss}')
+    else:
+        inss = 642.34
 
-# if salario  >=2919.72 and salario< 5839.45:
-#     if salario >=2826.66 and 3751.05:
-#         INSS = (11*salario)/100
-#         IRRF = (15*salario)/100
-#         print(f'INSS = {INSS}')
-#         print(f'IRRF = {IRRF}')
-#         print(f'Salario liquido = {salario-INSS-IRRF}')
-#     elif salario >= 3751.45 and salario<=4664.68:
-#         INSS = (11*salario)/100
-#         IRRF = (22.5*salario)/100
-#         print(f'INSS = {INSS}')
-#         print(f'IRRF = {IRRF}')
-#         print(f'Salario liquido = {salario-INSS-IRRF}')
-#     elif salario > 4664.68:
-#         INSS = (11*salario)/100
-#         IRRF = (27.5*salario)/100
-#         print(f'INSS = {INSS}')
-#         print(f'IRRF = {IRRF}')
-#         print(f'Salario liquido = {salario-INSS-IRRF}')
+    return inss
+
+def calculo_irrf(salario,inss):
+    if salario>=0 and salario<=1903.98:
+        irrf=(salario-inss) * 0
+    elif salario>1903.98 and salario<=2826.65:
+        irrf=(salario-inss) * 0.075
+    elif salario>2826.65 and salario <=3751.05:
+        irrf=(salario-inss) * 0.15
+    elif salario >3751.05 and salario<=4663.68:
+        irrf=(salario-inss) * 0.225
+    elif (salario >4663.68):
+        irrf=(salario-inss) * 0.275
+    return irrf
+
+    
+
+salario = float(input('Qual o salario bruto'))
+inss = calculo_inss(salario)
+irrf = calculo_irrf(salario,inss)
+
+
+print (f'Inss: {inss}')
+print (f'Irrf: {irrf}')
+print (f'salario liquido = {salario-inss-irrf}')
 
 
 
@@ -145,6 +136,6 @@
 #--- Informe os percentuais e valores que a pessoa deve utilizar em cada categoria
 #--- Deve ser utilizado a função format e os caracteres de tabulação e quebra de linha para cada categoria
 
-salario = float(input('Informe seu salario'))
+# salario = float(input('Informe seu salario'))
 
-print(f'\n \t Despesas fixas {(50*salario)/100} \n \t Investimentos a longo prazo {(20*salario)/100} \n \t Investimentos a curto prazo {(10*salario)/100} \n \t gastos livres {(20*salario)/100}')
+# print(f'\n \t Despesas fixas {(50*salario)/100} \n \t Investimentos a longo prazo {(20*salario)/100} \n \t Investimentos a curto prazo {(10*salario)/100} \n \t gastos livres {(20*salario)/100}')
