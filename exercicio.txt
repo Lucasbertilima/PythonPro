@@ -1,0 +1,4 @@
+skol;puro malte;20 
+cocacola;cola;0 
+guarana;suco;100 
+kaiser;cerveja;60 
