@@ -16,3 +16,12 @@ def cadastro_cliente(numero):
 numero = int(input('Digite o número de cadastros:'))
 lista_cadastro = cadastro_cliente(numero)
 print(lista_cadastro)
+
+#criar uma função para salvar em um arquivo 
+arquivo = open('Aula17/clientes.txt','a')
+for cliente in arquivo:
+    cliente_chave= list(cliente.keys())
+    for chaves in cliente_chave:
+    salvar= (f'{cliente[chaves]}')
+arquivo.write
+arquivo.close()
