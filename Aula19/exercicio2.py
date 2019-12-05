@@ -12,9 +12,28 @@ pess   = [  ['Alex'   ,'Paulo'  ,'Pedro'  ,'Mateus' ,'Carlos' ,'João'   ,'Joaqu
 
 # 1 - Usando estas 2 listas, fazer uma função que crie retorne uma lista com dicionários
 # com os dados das pessoas com idade maior ou igua a 18 anos
+def cria_lista(pess,cab):
+        lista=[]
+        for l in range(0,7):
+                if int(pess[3][l]) >= 18:
+                        dicionario={cab[0]:pess[0][l],cab[1]:pess[1][l],cab[2]:pess[2][l],cab[3]:pess[3][l]}
+                        lista.append(dicionario)
+        return lista
+
+
+lista=cria_lista(pess,cab)
+
+
+
 #
 #  2 - Imprima a lista resultante com um for imprimindo um dicionário em cada linha 
 # (não prescisa usar o f-string, .format())
+
+for i in lista:
+        print('{} \n'.format(i))
+
 #
 #  3 - Imprima a lista resultante com um for imprimindo um dicionário em cada linha 
 # (usando o f-string)
+for i in lista:
+        print(f'{i} \n')
