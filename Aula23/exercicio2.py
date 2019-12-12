@@ -41,7 +41,8 @@ class cliente:
 
     def salvar(self):
         arquivo = open('Aula23/cadastro1.txt','a')
-        arquivo.write(f'{self.dado_bruto}\n')
+        texto = f'{self.codigo_cliente};{self.nome};{self.idade};{self.sexo};{self.email}:{self.telefone}\n'
+        arquivo.write(texto)
         arquivo.close()
 
     def atualizar(self,codigo,nome,idade,sexo,email,telefone):
@@ -51,6 +52,8 @@ class cliente:
         self.sexo = sexo
         self.email = email
         self.telefone = telefone
+
+        self.dado_bruto = f'{self.codigo_cliente};{self.nome};{self.idade};{self.sexo};{self.email}:{self.telefone}\n'
         
         
 
