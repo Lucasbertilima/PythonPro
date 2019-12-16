@@ -36,10 +36,13 @@ class CadastroCliente:
         Neste caso se faz necessário adicionar linha no arquivo de texto com o metodo
         gravar adicionando os novos clientes (use o atributo 'a')
         '''
-        codigo = int(input('Informe o novo codigo'))
-        for dado in self.clientes:
-            if dado['codigo'] == codigo:
-                print('Cliente já existe')
+
+        codigo = len(self.clientes)+1
+        nome = input('Informe o nome do cliente')
+        idade = int(input('Informe a idade do cliente'))
+        telefone = input('Informe o telefone do cliente')
+        email = input('Qual o email do novo cliente')
+        endereço = input('Qual o endereço do cliente')
 
 
     def pesquisa_codigo(self,codigo):
@@ -51,7 +54,12 @@ class CadastroCliente:
         Lembrando que no caso de alteração, será necessário fazer a gravação de
         todos os dados usando o atributo 'w'.
         '''
-        pass
+        for cliente in self.clientes:
+            if codigo == cliente['codigo']:
+                print(f'Codigo {cliente['codigo']}\n nome {cliente['nome']}\n idade {cliente['idade']}\n telefone {cliente['telefone']}\n email {cliente['email']}\n endereço {cliente['endereço']}')
+                a = input('Deseja alterar os dados do cliente? [s/n]').upper()
+                if a == 'S':
+                    gravar()
 
     def gravar(self,nome_arquivo,atributo):
         '''
@@ -60,4 +68,6 @@ class CadastroCliente:
         atributo 'a' para adicionar linha.
         o parametro nome_arquivo é o nome do arquivo em que se deseja gravar.
         '''
-        pass
+        
+        arquivo = open(f'{nome_arquivo}',f'{atributo}')
+        arquivo.close()

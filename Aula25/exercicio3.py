@@ -33,6 +33,8 @@ class Produto:
         Os dados que podem ser atualizados são: 
         nome, marca, preço de custo(float),preço de venda(float)
         '''
+
+        
         self.nome=input('Informe o novo nome')
         self.marca=input('Informe a nova marca')
         self.preco_custo=float(input('Informe o preço custo'))
