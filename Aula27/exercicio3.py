@@ -327,8 +327,7 @@ print(numero.reverse())
 # 18.1) lista1
 lista1 = lista_simples_int(8)
 print(lista1)
-p=lista1.reverse()
-print(p)
+print(f'Reversa {lista1.reverse()}')
 # 18.2) lista2
 lista2 = lista_simples_int(8)
 

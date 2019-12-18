@@ -36,6 +36,10 @@ for i in range(0,7):
     dicio = {lista1[0][2]:lista1[3][i],lista1[0][3]:lista1[4][2][i]}
     lista_legumes.append(dicio)
 
+lista_tudo = []
+lista_tudo.append(lista_frutas)
+lista_tudo.append(lista_verduras)
+lista_tudo.append(lista_legumes)
 print(lista_frutas)
 print(lista_legumes)
 print(lista_verduras)
@@ -81,12 +85,58 @@ lista1.insert(4,roupas)
 lista1[5].insert(3,preco)
 print(lista1)
 # 6) Salve esta lista em um arquivo .txt de moque que cada linha tenha o item e seu preço. 
+lista_frutas=[]
+lista_verduras=[]
+lista_legumes=[]
+lista_roupas = []
+for i in range(0,7):
+    dicio = {lista1[0][0]:lista1[1][i],lista1[0][4]:lista1[5][0][i]}
+    lista_frutas.append(dicio)
+    dicio = {lista1[0][1]:lista1[2][i],lista1[0][4]:lista1[5][1][i]}
+    lista_verduras.append(dicio)
+    dicio = {lista1[0][2]:lista1[3][i],lista1[0][4]:lista1[5][2][i]}
+    lista_legumes.append(dicio)
+    dicio = {lista1[0][3]:lista1[4][i],lista1[0][4]:lista1[5][2][i]}
+    lista_roupas.append(dicio)
+lista_tudo = []
+lista_tudo.append(lista_frutas)
+lista_tudo.append(lista_verduras)
+lista_tudo.append(lista_legumes)
+lista_tudo.append(lista_roupas)
+# print(lista_frutas)
+# print(lista_legumes)
+# print(lista_verduras)
 
+# arquivo = open('Aula28/arquivo.txt','w')
+# for lista in lista_tudo:
+#   for linha in lista:
+#     arquivo.write(f'{linha}\n')
+  
+
+# arquivo.close()
 # 7) Com a lista2, crie uma lista com dicionário onde cada dicionário é um cadastro de uma pessoa.
-
+lista2 = ['nome',   ['Alex'   ,'Paulo'  ,'Pedro'  ,'Mateus' ,'Carlos' ,'João'   ,'Joaquim'],
+                'telefone',['4799991','4799992','4799993','4799994','4799995','4799996','4799997'],
+                'email',   ['a@a.com','b@b.com','c@c.com','d@d.com','e@e.com','f@f.com','g@g.com'],
+                'idade',   ['18'     ,'25'     ,'40'     ,'16'     ,'15'     ,'19'     ,'17'     ]
+                ]
+lista_pessoas = []
+for i in range(0,7):
+  dicio = {lista2[0]:lista2[1][i],lista2[2]:lista2[3][i],lista2[4]:lista2[5][i],lista2[6]:lista2[7][i]}
+  lista_pessoas.append(dicio)
+print(lista_pessoas)
 # 8) Organize a lista2, retirando o cabeçalho e junte os dados de modo que cada cliente ocupe uma lista. Após, salve os dados
 # em um arquivo .txt 
-
+cabecalho = [lista2[0],lista2[2],lista2[4],lista2[6]]
+lista2_organizada = []
+for i in range(0,7):
+  b = [lista2[1][i],lista2[3][i],lista2[5][i],lista2[7][i]]
+  lista2_organizada.append(b)
+print(lista2_organizada)
+arquivo = open('Aula28/arquivo.txt','w')
+for i in lista2_organizada:
+  arquivo.write(f'{i[0]};{i[1]};{i[2]};{i[3]}\n')
+arquivo.close()
 # 9) Criando uma fila. Uma fila é uma estrutura de dados onde o primeiro item que entra é o ultimo que sai. Resumindo, o item novo
 # entra no indice 0 da lista e sai pelo ultimo indice. 
 # Ex:
@@ -98,6 +148,14 @@ print(lista1)
 # >>> [3] 
 
 # Crie um programa que adiciona novos clientes em uma fila e conforme vai atendendo, remova-os da fila do caixa da loja.
+nomes=['nome1','nome2','nome3','nome4','nome5']
+fila = []
+for i in nomes:
+  fila.insert(0,i)
+  print(fila)
+for i in range(5,0,-1):
+  fila.pop()
+  print(fila)
 
 # 10) Criando uma pilha. Uma pilha é uma estrutura de dados onde o primeiro que entra é o ultimo a sair. Resumindo,
 # Os elementos são adicionados e removidos no mesmo lado da lista.
@@ -110,3 +168,11 @@ print(lista1)
 # >>> [1] 
 
 # Crie um programa em que adicione os novos números na pilha. Após some eles removendo da pilha.
+numeros = [0,1,2,3,4,5]
+pilha = []
+for i in range(0,6):
+  pilha.append(numeros[i])
+  print(pilha)
+for i in range(6,0,-1):
+  pilha.pop()
+  print(pilha)

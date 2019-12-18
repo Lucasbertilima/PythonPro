@@ -16,7 +16,7 @@
 # Como vemos, no primeiro exemplo o caracter "a" foi substituido pelo "A"
 # e no segundo exemplo o "a" foi removido da string.
 
-# https://forms.gle/PLuAZXpmpBvE1vkX7
+# https://forms.gle/PLuAZXpmpBvE1vkX7 
 
 # Fazer usando funções
 
@@ -25,3 +25,30 @@
 # 2 - Separar aqueles que gostam de cerveja e salvar no cerveja.txt 
 # 3 - Separar aqueles que gostam de refigerantes e salvar no refrigerante.txt
 # 4 - Separar em arquivos .txt os homens das mulheres
+
+
+lista = []
+arquivo = open('Aula28/Pesquisa de Gostos.csv','r')
+for linha in arquivo:
+    linha = linha.strip()
+    linha = linha.split(',')
+    dicio = {'data':linha[0],'sexo':linha[1],'escolaridade':linha[2],'veiculo':linha[3],'nome_veiculo':linha[4],'idade':linha[5],'correto':linha[6],'gosta_de_cerveja?':linha[7],'marca':linha[8],'cervejas_compradas':linha[9]}
+    lista.append(dicio)
+
+lista.pop(0)
+print(lista)
+arquivo.close() 
+
+def separa_cerveja(lista):
+    lista = lista
+    for linha in lista:
+        if linha['gosta_de_cerveja?'] == 'Sim':
+            arquivo = open('Aula28/cerveja.txt','a')
+            arquivo.write(f'{linha}\n')
+            arquivo.close()
+
+separa_cerveja(lista)
+
+
+
+
