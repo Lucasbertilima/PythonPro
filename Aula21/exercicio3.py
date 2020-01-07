@@ -21,12 +21,3 @@ def ler():
                 break        
     return numeros
 
-lista = ler()
-lista2=[]
-for i in lista:
-    n=i
-    n=n*5
-    lista.append(n)
-
-print (lista)
-          
