@@ -13,6 +13,3 @@
 import time 
 from time import sleep
 
-for i in range(3600,-1,-1):
-    print(i)
-    time.sleep(0.0473)
