@@ -4,12 +4,9 @@
 
 #Mysql = MariaDb
 
-# CRUD
+# CRUD0
 # C = CREATE
 # R = READ
 # U = UPDATE
 # D = DELETE
-
-import time 
-from time import sleep
 
