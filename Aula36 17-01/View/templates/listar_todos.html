@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{titulo_app}} - Listar</title>
+    <link rel="stylesheet" href="../static/layout.css">
+</head>
+<body>
+    <div class="retangulo">
+        <br>
+        <h1><div class="center"><label>{{titulo_app}} - Listar Todos</label></div></h1>
+        <br>
+        <br>
+        <h2><a class = 'center-link' href="/">Voltar a tela inicial</a> <br/></h2>
+        <br>
+        <table id = 'tabela-listas'>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME_SQUAD</th>
+                    <th>DESCRICAO</th>
+                    <th>NUMERO_PESSOAS</th>
+                    <th>ID_BACKEND</th>
+                    <th>ID_FRONTEND</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in lista %}
+                <tr>
+                    <td>{{ p[0] }}</td>
+                    <td>{{ p[1] }}</td>
+                    <td>{{ p[2] }}</td>
+                    <td>{{ p[3] }}</td>
+                    <td>{{ p[4] }}</td>
+                    <td>{{ p[5] }}</td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        <h2><a class = 'center-link' href="/">Voltar a tela inicial</a> <br/></h2>
+        <br>      
+    </div>
+</body>
+</html>
