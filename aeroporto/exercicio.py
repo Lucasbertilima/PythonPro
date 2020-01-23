@@ -100,7 +100,6 @@ while True:
         arquivo = open('aeroporto/aviao.txt','w')
         for i in aviao:
             arquivo.write(i)
-            arquivo.write('\n')
         arquivo.close()
 
 
