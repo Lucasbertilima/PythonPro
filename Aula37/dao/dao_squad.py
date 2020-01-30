@@ -47,11 +47,14 @@ class SquadDao:
            self.conexao.commit()
 
     def deletar(self,id):
+
            comando = f"""
                    DELETE FROM squad
-                   WHERE id={id}
+                   WHERE id={id};
      
                    """
+
+        self.cursor.execute(comando)
 
 
 
