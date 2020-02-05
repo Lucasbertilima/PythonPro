@@ -4,11 +4,12 @@ from flask import request
 from Aula41.Dao.pessoa_dao import PessoaDao
 from Aula41.Model.pessoa_model import PessoaModel
 
+
 class PessoaController(Resource):
     def __init__(self):
         self.dao = PessoaDao()
 
-    def get(self,id=None):
+    def get(self, id=None):
         if id:
             return self.dao.get_by_id(id)
         return self.dao.list_all()
@@ -21,7 +22,7 @@ class PessoaController(Resource):
         msg = self.dao.insert(pessoa)
         return msg
 
-    def put(self,id):
+    def put(self, id):
         nome = request.json['nome']
         sobrenome = request.json['sobrenome']
         idade = int(request.json['idade'])
@@ -29,5 +30,5 @@ class PessoaController(Resource):
         msg = self.dao.update(pessoa)
         return msg
 
-    def delete(self,id):
+    def delete(self, id):
         return self.dao.remove(id)

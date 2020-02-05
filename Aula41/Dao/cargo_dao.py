@@ -32,6 +32,7 @@ class CargoDao:
         id = self.cursor.lastrowid
         cargo.id = id
         return cargo.__dict__
+
     def update(self,cargo:CargoModel):
         self.cursor.execute(f"""UPDATE cargo
         SET 
