@@ -6,25 +6,27 @@
 #---- Instalação do conector do Mysql
 #---- pip install mysql-connector-python
 
+from Aula53.dao.cargo_dao import CargoDao
 
-import sqlalchemy as db
-from sqlalchemy.ext.declarative import declarative_base
+from Aula53.model.cargo_model import CargoModel
 
-BaseModel = declarative_base()
+dao = CargoDao()
+#cargos = dao.list_all()
+#cargo = CargoModel()
+#cargo.Nomecargo= 'bombeiro'
+#cargo.Cargahoraria = 40
+#cargo.Salario = 3000
+#a=dao.insert(cargo)
+#print(a)
+#for i in a:
+#    print(i)
 
-class ProdutoModel(BaseModel):
-    __tablename__ = 'Produto'
-        id = db.column(db.INTEGER, primary_key=True )
-        nome = db.column(db.String(length=100))
-        descricao = db.column(db.String(length=200))
+dao.update()
+cargos = dao.list_all()
+print(cargos)
 
-#-----database+connector://user:passwd@url:porta/database
-conexao = db.create_engine("mysql+mysqlconnector://topskills01:ts2019@mysql.topskills.dev:3306/topskills01")
-criador_sessao = db.orm.session_maker()
-criador_sessao.configure(bind=conexao)
-sessao = criador_sessao()
-
-produtos = sessao.query(ProdutoModel).all()
-
-for p in produtos:
-    print(p)
+#dao.delete(4)
+#cargos = dao.list_all()
+#print(cargos)
+#a = dao.get_by_id(3)
+#print(a)
