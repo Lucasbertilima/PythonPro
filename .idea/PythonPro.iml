@@ -3,8 +3,10 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/Aula53/ENV" />
+      <excludeFolder url="file://$MODULE_DIR$/Aula54/ENV" />
+      <excludeFolder url="file://$MODULE_DIR$/Aula55/ENV" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.7 (PythonPro) (2)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.7" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">

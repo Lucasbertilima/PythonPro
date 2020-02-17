@@ -15,11 +15,8 @@ class CargoDao(BaseDao):
         self.sessao.commit()
         return self.sessao.query(CargoModel).all()
 
-    def update(self):
-        a = self.sessao.query(CargoModel)
-        a = a.filter(CargoModel.idcargo==3)
-        cargo = a.one()
-        cargo.Nomecargo = 'programmer'
+    def update(self,model:CargoModel):
+        self.sessao.merge(model)
         self.sessao.commit()
 
     def delete(self,id):
