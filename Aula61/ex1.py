@@ -21,24 +21,21 @@
 # Dado N = 32, a função deve retornar 0, porque N tem representação binária '100000'
 # e, portanto, sem lacunas binárias.
 
-
 class Solucao:
 
-    def solucao(self,n1):
+    def solution(self,N):
         n2= []
         intervalo = True
         tam_intervalo = 0
         tam_intervalo2 = 0
-        n1 = bin(n1)
-        n1 = n1.strip()
-        n1 = n1.split('0b')
-        n1.remove('')
-        for i in n1:
+        N = bin(N)
+        N = N.strip()
+        N = N.split('0b')
+        N.remove('')
+        for i in N:
             for j in i:
                 n2.append(j)
 
-        print(n2)
-        n3 = n2[-1]
         for i in n2:
             if intervalo == True:
                 if i == '0':
@@ -56,12 +53,7 @@ class Solucao:
                     tam_intervalo +=1
                     intervalo = False
 
-
-
-
-        print(tam_intervalo2)
-
-
+        return tam_intervalo
 
 a = Solucao()
-a.solucao(529)
+print(a.solution(1041))

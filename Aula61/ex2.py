@@ -37,8 +37,8 @@
 
 class Matriz:
 
-    def girar(self,giro):
-        matriz = [4,2,7]
+    def girar(self,A,giro):
+        matriz = A
         print(f'Matriz original {matriz}')
         count= 0
         while count < giro:
